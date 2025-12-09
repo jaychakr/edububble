@@ -21,11 +21,7 @@ footer, .card {
 }
 
 .card {
-  padding: 1em;
-}
-
-.card p {
-  font-family: "Arial";
+  padding: 0.5em;
 }
 
 .edububble {
@@ -34,6 +30,14 @@ footer, .card {
   display: block;
   margin: 10px auto;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.card h2 {
+  color: #172a6b;
+}
+
+iframe {
+  border-radius: 12px;
 }
 
 .logo {
