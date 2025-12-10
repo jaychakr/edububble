@@ -7,7 +7,12 @@ function Home() {
             <img className="edububble" src={edububble}/>
             <div className="card">
                 <h2>Posts: </h2>
-                <Link to="/dpp/?p=2365">Mark Zuckerberg Visits Harvard</Link>
+                <p>
+                    <Link to="/dpp/?p=1">Rainier Labs founder, Jay Chakravarty speaks to Bryce Johnson from the Vesting podcast</Link>
+                </p>
+                <p>
+                    <Link to="/dpp/?p=2365">Mark Zuckerberg Visits Harvard</Link>
+                </p>
                 <p>
                     <img src={constructionWorker} className="logo" alt="Construction worker" />
                 </p>
