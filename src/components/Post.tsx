@@ -1,21 +1,29 @@
 import { useSearchParams } from "react-router-dom"
-const videoIds: Record<string, string> = {
-    "1": "cyYRyrNQfjs",
-    "2365": "hbQPHEWxsaI"
-}
+import { useState, useEffect } from 'react'
+import db from '../firebase.ts'
+import { doc, getDoc } from "firebase/firestore"
 function Post() {
     const [searchParams] = useSearchParams();
     const postId = searchParams.get("p");
-    const videoId = postId ? videoIds[postId] : undefined; 
+    const [content, setContent] = useState("");
+    useEffect(() => {
+        const getPost = async () => {
+            if (!postId) {
+                return;
+            }
+            const docRef = doc(db, "posts", postId);
+            const docSnap = await getDoc(docRef);
+            if (docSnap.exists()) {
+                setContent(docSnap.data().content);
+            }
+        }
+        getPost();
+    }, []);
     return (
         <div className="card">
-            <iframe
-                width="560"
-                height="315"
-                src={`https://www.youtube.com/embed/${videoId}`}
-                title="Mark Zuckerberg Visits Harvard"
-                allowFullScreen>
-            </iframe>
+            {
+                content ? <div dangerouslySetInnerHTML={{ __html: content }} /> : <h2>Loading...</h2>
+            }
         </div>
     )
 }

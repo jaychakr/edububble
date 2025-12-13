@@ -32,10 +32,6 @@ footer, .card {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
 }
 
-.card h2 {
-  color: #172a6b;
-}
-
 iframe {
   border-radius: 12px;
 }
