@@ -1,4 +1,3 @@
-import constructionWorker from '../assets/construction-worker.svg'
 import edububble from '../assets/edububble.jpg'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
@@ -39,12 +38,6 @@ function Home() {
                     )
                 }) : <h2>Loading...</h2>
             }
-            <p>
-                <img src={constructionWorker} className="logo" alt="Construction worker" />
-            </p>
-            <p>
-                This site is currently under construction and will become available for new users at <a href="https://edububble.com"><b>edububble.com</b></a> once development is complete and more content is available.
-            </p>
         </div>
     )
 }
