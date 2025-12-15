@@ -1,15 +1,27 @@
-header, footer {
+header, footer, nav {
   background-color: crimson;
   color: white;
-  padding: 10px;
+  margin: 5px;
+  padding: 5px;
   font-family: "Chalkduster";
   border-radius: 12px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+  border: 1px solid black;
 }
 
 header {
   display: flex;
   justify-content: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  border-radius: 12px;
+  margin: 5px;
 }
 
 footer, .card {
@@ -29,6 +41,15 @@ footer, .card {
   border-radius: 12px;
   display: block;
   margin: 10px auto;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.post {
+  width: 75%;
+  border: 1px solid black;
+  margin: 5px auto;
+  padding: 5px;
+  border-radius: 12px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
 }
 
