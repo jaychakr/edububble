@@ -15,6 +15,8 @@ function Post() {
             const docSnap = await getDoc(docRef);
             if (docSnap.exists()) {
                 setContent(docSnap.data().content);
+            } else {
+                setContent("<h2>404</h2><h2>Post not found</h2>");
             }
         }
         getPost();
