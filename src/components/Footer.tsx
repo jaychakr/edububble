@@ -15,7 +15,7 @@ function Footer() {
                 <a href="https://firebase.google.com" target="_blank">
                     <img src={firebaseLogo} className="logo firebase" alt="Firebase logo" />
                 </a>
-                <p>2025 EduBubble Inc. All rights reserved.</p>
+                <p>© 2007 EduBubble, All rights reserved</p>
             </div>
         </footer>
     )
